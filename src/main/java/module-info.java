@@ -6,7 +6,7 @@ module com.example.escriturarapida {
     opens com.example.escriturarapida to javafx.fxml;
     opens com.example.escriturarapida.model.words to javafx.fxml;
     opens com.example.escriturarapida.model.timer to javafx.fxml;
-    opens com.example.escriturarapida.model.GameLogic to javafx.fxml;
+    opens com.example.escriturarapida.model.gameLogic to javafx.fxml;
     opens com.example.escriturarapida.view to javafx.fxml;
 
     exports com.example.escriturarapida;

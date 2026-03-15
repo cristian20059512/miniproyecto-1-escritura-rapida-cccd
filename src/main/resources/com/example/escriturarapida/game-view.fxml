@@ -42,7 +42,7 @@
             <Bloom />
          </effect>
       </Label>
-      <TextField fx:id="wordTextField" layoutX="202.0" layoutY="173.0" prefHeight="38.0" prefWidth="194.0" />
+      <TextField fx:id="wordTextField" alignment="CENTER" layoutX="202.0" layoutY="173.0" prefHeight="38.0" prefWidth="194.0" />
       <Label fx:id="timeLabel" layoutX="449.0" layoutY="30.0" text="TIME " textFill="WHITE">
          <font>
             <Font name="Showcard Gothic" size="25.0" />
