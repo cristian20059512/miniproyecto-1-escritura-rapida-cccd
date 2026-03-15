@@ -1,2 +1,9 @@
 module:com.example.escriturarapida
 com.example.escriturarapida
+com.example.escriturarapida.controller.game
+com.example.escriturarapida.controller.result
+com.example.escriturarapida.controller.welcome
+com.example.escriturarapida.model.gameLogic
+com.example.escriturarapida.model.timer
+com.example.escriturarapida.model.words
+com.example.escriturarapida.view
