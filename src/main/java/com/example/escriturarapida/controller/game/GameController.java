@@ -3,6 +3,7 @@ package com.example.escriturarapida.controller.game;
 import com.example.escriturarapida.controller.result.FinalController;
 import com.example.escriturarapida.model.gameLogic.GameLogic;
 import com.example.escriturarapida.model.timer.GameTimer;
+import com.example.escriturarapida.utilities.GameData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -97,6 +98,9 @@ public class GameController implements IGameController {
      * @throws IOException if the FXML file for the final view cannot be loaded
      */
     private void goToFinal(int levelesCompletados, String motivo, int tiempoRestante, boolean winLose) throws IOException {
+        GameData.level = levelesCompletados;
+        GameData.seconds = tiempoRestante;
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("/com/example/escriturarapida/final-view.fxml")
         );

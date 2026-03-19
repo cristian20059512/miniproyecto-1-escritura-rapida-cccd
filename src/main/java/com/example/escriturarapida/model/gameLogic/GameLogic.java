@@ -1,5 +1,7 @@
 package com.example.escriturarapida.model.gameLogic;
 
+import com.example.escriturarapida.utilities.GameData;
+
 /**
  * Manages the core game logic for the Escritura Rapida game.
  * <p>
@@ -13,17 +15,19 @@ package com.example.escriturarapida.model.gameLogic;
  */
 public class GameLogic implements IGameLogic {
 
-    /** The player's current level, starting at 1. */
+    /** The player's current level, starting at 1 or from saved data. */
     private int points;
 
     /** The level required to win the game. */
     int win = 45;
 
     /**
-     * Constructs a new {@code GameLogic} instance with the starting level set to 1.
+     * Constructs a new {@code GameLogic} instance.
+     * If there is saved progress in {@link GameData}, resumes from that level.
+     * Otherwise starts from level 1.
      */
     public GameLogic() {
-        this.points = 1;
+        this.points = GameData.level > 0 ? GameData.level : 1;
     }
 
     /**

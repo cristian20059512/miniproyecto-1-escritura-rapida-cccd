@@ -74,6 +74,7 @@ public class FinalController implements IFinalController {
      */
     @FXML
     public void onHandleRestart(ActionEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("/com/example/escriturarapida/game-view.fxml")
         );
