@@ -1,5 +1,6 @@
 package com.example.escriturarapida.controller.result;
 
+import com.example.escriturarapida.utilities.GameData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,6 +75,7 @@ public class FinalController implements IFinalController {
      */
     @FXML
     public void onHandleRestart(ActionEvent event) throws IOException {
+        GameData.reset(); // ← más limpio
 
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("/com/example/escriturarapida/game-view.fxml")
@@ -113,7 +115,7 @@ public class FinalController implements IFinalController {
      * @throws IOException if the welcome view FXML cannot be loaded
      */
     @FXML
-    public void onHandleExit(ActionEvent event) throws IOException {
+    public void onHandleMenu(ActionEvent event) throws IOException {
         goToWelcome();
     }
 

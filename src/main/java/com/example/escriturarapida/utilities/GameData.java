@@ -21,4 +21,13 @@ public class GameData {
      * Reset to 0 when the player restarts.
      */
     public static int seconds = 0;
+
+    /**
+     * Resets all game state back to zero.
+     * Called when the player restarts or exits to the welcome screen.
+     */
+    public static void reset() {
+        level = 0;
+        seconds = 0;
+    }
 }

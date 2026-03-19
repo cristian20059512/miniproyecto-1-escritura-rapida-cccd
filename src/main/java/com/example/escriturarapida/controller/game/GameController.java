@@ -236,19 +236,14 @@ public class GameController implements IGameController {
         } else {
             validateLabel.setText("INCORRECTO");
             validateLabel.setStyle("-fx-text-fill: red;");
-            gameTimer.stopTimer();
+            wordTextField.clear();
 
             javafx.animation.PauseTransition pause = new javafx.animation.PauseTransition(
                     javafx.util.Duration.seconds(1)
             );
-            pause.setOnFinished(e -> {
-                try {
-                    goToFinal(session.getPoints(), "    PALABRA \n INCORRECTA", gameTimer.getTiempoRestante(), winLose);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            });
+            pause.setOnFinished(e -> validateLabel.setText(""));
             pause.play();
+
         }
     }
 }

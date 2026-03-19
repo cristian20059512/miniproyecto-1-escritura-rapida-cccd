@@ -26,5 +26,5 @@ public interface IFinalController {
      * @param event the action event triggered by the exit button
      * @throws java.io.IOException if the welcome view FXML cannot be loaded
      */
-    void onHandleExit(javafx.event.ActionEvent event) throws java.io.IOException;
+    void onHandleMenu(javafx.event.ActionEvent event) throws java.io.IOException;
 }
